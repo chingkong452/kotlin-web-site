@@ -44,14 +44,9 @@ Create a new Spring Boot project in IntelliJ IDEA:
 
    * **Package name**: org.jetbrains.kotlin.taskmanagerdemo
    * **JDK**: jbr-21
-
-     > If you don't have a JDK installed, you can download it from the dropdown list.
-     >
-     {style="note"}
-
    * **Java**: 17
 
-     > If you don't have Java 17 installed, you can download it from the JDK dropdown list.
+     > If you don't have these Java and JDK versions installed, you can download them from the dropdown lists.
      >
      {style="tip"}
 
@@ -71,9 +66,14 @@ Create a new Spring Boot project in IntelliJ IDEA:
 
 In your project:
 
-1. Open the ![AI Chat](ai-chat.png){width=25}{type="joined"}**AI Chat** tool window and in the bottom-left select **Claude Agent**.
-2. Click ![Operation mode](operation-mode.png){width=25}{type="joined"} and select **Mode: Plan Mode**.
+1. Open the ![AI Chat](toolWindowChat@20x20.svg){width=20} **AI Chat** tool window. By default, the **Chat** mode is selected. Select **Claude Agent**.
+
+   ![Select Claude Agent](select-claude-agent.png){width=300}
+
+2. Click **Mode: Default**![Operation mode](app-client.expui.general.chevronDownLarge.svg){width=20}{type="joined"} and select **Mode: Plan Mode**.
    Claude Agent is now ready to plan without executing actions.
+
+   ![Select Plan Mode](claude-plan-mode.png){width=400}
 
    > For more information about the different operation modes, see [Select operation mode](https://www.jetbrains.com/help/ai-assistant/claude-agent.html#select-operation-mode).
    >
@@ -112,7 +112,7 @@ Before running the app, review the generated changes carefully:
 1. Open the **Git** window to see the list of commits. 
 2. Select a commit and double-click each modified file to review the diff in IntelliJ IDEA's side-by-side viewer.
 
-![Side by side viewer](side-by-side-viewer.png){width=600}
+![Side by side viewer](side-by-side-viewer.png){width=800}
 
 ## Run the app
 
@@ -133,6 +133,10 @@ Once you are happy with the changes, run the app:
    You should now see the basic UI that Claude created.
 
    ![Run the app](run-spring-claude-app.png){width=800}
+
+   > Since Claude designs the UI, your UI may look different to the version in this tutorial.
+   >
+   {style="tip"}
 
 ## Test the app
 
@@ -158,8 +162,8 @@ Claude also creates some tests automatically. Check that all the tests pass by r
    ./gradlew test
    ```
 
-Alternatively, in the `src/test` directory, open a test and click the run icon in the gutter. A successful test shows 
-a checkmark in the gutter.
+Alternatively, in the `src/test` directory, open a test and click the run icon ![run icon](app-client.expui.run.run.svg){width=20} in the gutter. A successful test shows
+![run success icon](app-client.expui.gutter.runSuccess.svg){width=20}.
 
 If any test doesn't work, send a new prompt to Claude asking it to investigate and fix the problem.
 
